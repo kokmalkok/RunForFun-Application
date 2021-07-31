@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cwp-Z4-gCT">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RunForFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-TW-4jN">
+                                <rect key="frame" x="8" y="0.0" width="359" height="716"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать на пробежку" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dod-D5-iS9">
+                                        <rect key="frame" x="2" y="0.0" width="355" height="238.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="nd3-NJ-AwN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="19"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hjn-xu-6Xv">
+                                        <rect key="frame" x="54.666666666666657" y="238.66666666666666" width="249.99999999999997" height="477.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-UK-TCs" userLabel="Начнем пробежку">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="118.66666666666667"/>
+                                                <color key="backgroundColor" red="0.0" green="0.57344603538513184" blue="0.27058163285255432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="G3q-1c-Wip"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="yne-hp-79h"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <state key="normal" title="Начнем пробежку"/>
+                                                <connections>
+                                                    <segue destination="uBb-oE-18m" kind="show" identifier="StartRunViewController" id="1ya-b0-l1N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUk-s8-rnd" userLabel="Начнем тренировку">
+                                                <rect key="frame" x="0.0" y="119.66666666666666" width="250" height="118.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <state key="normal" title="Начнем тренировку">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="fAA-RF-NM0" kind="presentation" id="7na-yv-ZEZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVm-Bp-73f" userLabel="Последние тренировки">
+                                                <rect key="frame" x="0.0" y="239.33333333333334" width="250" height="118.33333333333334"/>
+                                                <color key="backgroundColor" red="0.15215688943862915" green="0.3473164439201355" blue="0.51023852825164795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <state key="normal" title="Последние тренировки"/>
+                                                <connections>
+                                                    <segue destination="CFL-eR-wu7" kind="show" id="lmi-ey-LUw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsG-nr-C1t">
+                                                <rect key="frame" x="0.0" y="358.66666666666674" width="250" height="118.66666666666669"/>
+                                                <color key="backgroundColor" red="0.15215688943862915" green="0.3473164439201355" blue="0.51023852825164795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <state key="normal" title="План пробежек"/>
+                                                <connections>
+                                                    <segue destination="srz-a4-ZZ3" kind="show" id="pxB-EP-G7T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dod-D5-iS9" firstAttribute="height" secondItem="hjn-xu-6Xv" secondAttribute="height" multiplier="0.5" id="zJe-5L-EuK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q2v-TW-4jN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8sI-BI-nCE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q2v-TW-4jN" secondAttribute="bottom" constant="8" id="dbn-z1-vwb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q2v-TW-4jN" secondAttribute="trailing" constant="-8" id="ptC-hs-UFL"/>
+                            <constraint firstItem="Q2v-TW-4jN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="rNR-yt-bbJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="nxN-ZT-Jt9">
+                        <barButtonItem key="leftBarButtonItem" title="Профиль пользователя" image="icons8-личный-тренер-50" id="7Ky-M2-yeA">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="sMm-mV-oud" kind="presentation" id="LTy-hf-Mnn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="Jgg-03-l9k">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="6nH-5p-nKR" userLabel="Авторизация HealthKit">
+                                <rect key="frame" x="334.66666666666669" y="10.333333333333334" width="24.333333333333314" height="23.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="authorizeButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEe-id-2Y0"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2150" y="-231"/>
+        </scene>
+        <!--Workouts Table-->
+        <scene sceneID="tg0-iP-oMo">
+            <objects>
+                <tableViewController id="CFL-eR-wu7" userLabel="Workouts Table" customClass="WorkoutsTableViewController" customModule="RunForFun" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0sF-LC-3xO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FitnessWorkoutCell" textLabel="lgi-Tv-2jb" detailTextLabel="9Un-Iq-M4l" style="IBUITableViewCellStyleSubtitle" id="27w-Vm-xIZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65.666664123535156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="27w-Vm-xIZ" id="WLb-mL-Imj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.666664123535156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lgi-Tv-2jb">
+                                            <rect key="frame" x="16" y="8.3333333333333357" width="30" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Un-Iq-M4l">
+                                            <rect key="frame" x="16" y="29" width="82" height="27"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CFL-eR-wu7" id="whc-YM-ESY"/>
+                            <outlet property="delegate" destination="CFL-eR-wu7" id="AGW-5w-nzS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Тренировки" largeTitleDisplayMode="never" id="OKp-Hh-HRO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8I-hO-XcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2151" y="462"/>
+        </scene>
+        <!--Start Run View Controller-->
+        <scene sceneID="Qhi-ay-UJd">
+            <objects>
+                <viewController id="uBb-oE-18m" customClass="StartRunViewController" customModule="RunForFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xfX-6x-8av"/>
+                        <viewControllerLayoutGuide type="bottom" id="AVU-st-sAN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsv-5d-LjJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="WML-Dt-Sv2" userLabel="Container Stack View">
+                                <rect key="frame" x="16" y="8" width="343" height="606.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-Tb-dPF" userLabel="Top Stack View">
+                                        <rect key="frame" x="10" y="0.0" width="323" height="273.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TEI-Oa-26B" userLabel="Launch Stack View">
+                                                <rect key="frame" x="47.000000000000014" y="0.0" width="229.33333333333337" height="136.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Готовы к пробежке?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-6B-91X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="229.33333333333334" height="136.66666666666666"/>
+                                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="19"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-YI-w8v" userLabel="Data Stack View">
+                                                <rect key="frame" x="0.0" y="136.66666666666669" width="323" height="136.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дистанция:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp7-dS-cbT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="44.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-8i-1n6">
+                                                        <rect key="frame" x="0.0" y="45.666666666666686" width="56.333333333333336" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Средний темп:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHC-x5-Y74">
+                                                        <rect key="frame" x="0.0" y="91.666666666666686" width="119.33333333333333" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sP3-YI-w8v" firstAttribute="width" secondItem="XiM-Tb-dPF" secondAttribute="width" id="znb-nd-3QU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-fN-iYC" userLabel="Map Container View">
+                                        <rect key="frame" x="10" y="303.33333333333331" width="323" height="0.0"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W43-gT-kza">
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="0.0"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="uBb-oE-18m" id="pO4-po-8Lu"/>
+                                                </connections>
+                                            </mapView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="W43-gT-kza" secondAttribute="bottom" priority="750" id="JFE-jn-wah"/>
+                                            <constraint firstItem="W43-gT-kza" firstAttribute="top" secondItem="jTa-fN-iYC" secondAttribute="top" id="Non-Bf-UoR"/>
+                                            <constraint firstAttribute="trailing" secondItem="W43-gT-kza" secondAttribute="trailing" id="R5S-3Z-ElX"/>
+                                            <constraint firstItem="W43-gT-kza" firstAttribute="leading" secondItem="jTa-fN-iYC" secondAttribute="leading" id="m9x-ZI-Cc3"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rO9-n6-3aN" userLabel="Button Stack View">
+                                        <rect key="frame" x="46.666666666666657" y="333.33333333333331" width="249.99999999999997" height="272.99999999999994"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-Ns-MFS">
+                                                <rect key="frame" x="0.0" y="45.999999999999986" width="250" height="248.66666666666669"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="VI8-47-6PX"/>
+                                                    <constraint firstAttribute="width" constant="150" id="h72-Rt-13K"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="lGQ-oc-TpE"/>
+                                                    <constraint firstAttribute="width" secondItem="y3O-Ns-MFS" secondAttribute="height" multiplier="1:1" id="soV-Qz-WmE"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                                <state key="normal" backgroundImage="stop.circle.fill" catalog="system">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopTapped" destination="uBb-oE-18m" eventType="touchUpInside" id="Efz-0w-UO7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-kB-UAe">
+                                                <rect key="frame" x="0.0" y="1" width="250" height="271.66666666666669"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="APn-89-9yZ"/>
+                                                    <constraint firstAttribute="width" secondItem="wHH-kB-UAe" secondAttribute="height" multiplier="50:63" id="mdq-4g-E0i"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uGx-2C-E8f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.21254186210000001" green="0.74510200780000002" blue="0.29757982789999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" backgroundImage="play.circle.fill" catalog="system">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startTapped" destination="uBb-oE-18m" eventType="touchUpInside" id="sRg-Ii-BqR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="y3O-Ns-MFS" secondAttribute="bottom" id="9Fw-z4-9s6"/>
+                                            <constraint firstAttribute="height" constant="250" id="Dfa-QU-u2g"/>
+                                            <constraint firstItem="y3O-Ns-MFS" firstAttribute="top" secondItem="rO9-n6-3aN" secondAttribute="top" constant="20" id="E3Z-3W-BGv"/>
+                                            <constraint firstItem="y3O-Ns-MFS" firstAttribute="top" secondItem="rO9-n6-3aN" secondAttribute="top" constant="45" id="M5H-RH-z7U"/>
+                                            <constraint firstItem="y3O-Ns-MFS" firstAttribute="leading" secondItem="rO9-n6-3aN" secondAttribute="leading" constant="20" id="QgX-mi-d37"/>
+                                            <constraint firstItem="y3O-Ns-MFS" firstAttribute="leading" secondItem="rO9-n6-3aN" secondAttribute="leading" constant="20" id="XGg-T7-6Tf"/>
+                                            <constraint firstAttribute="trailing" secondItem="y3O-Ns-MFS" secondAttribute="trailing" constant="20" id="oo7-PL-Plx"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="y3O-Ns-MFS" secondAttribute="trailing" constant="20" id="pbJ-YJ-jnY"/>
+                                            <constraint firstAttribute="trailing" secondItem="y3O-Ns-MFS" secondAttribute="trailing" constant="20" id="xcN-Ln-MRE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jTa-fN-iYC" firstAttribute="width" secondItem="XiM-Tb-dPF" secondAttribute="width" id="pUe-DR-tLj"/>
+                                    <constraint firstItem="XiM-Tb-dPF" firstAttribute="width" secondItem="WML-Dt-Sv2" secondAttribute="width" constant="-20" id="yas-oQ-ZQi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WML-Dt-Sv2" firstAttribute="leading" secondItem="fsv-5d-LjJ" secondAttribute="leadingMargin" id="ClW-WX-8f7"/>
+                            <constraint firstItem="WML-Dt-Sv2" firstAttribute="top" secondItem="xfX-6x-8av" secondAttribute="bottom" constant="8" symbolic="YES" id="fkC-h2-MzM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WML-Dt-Sv2" secondAttribute="trailing" id="uxa-9P-Lzr"/>
+                            <constraint firstItem="WML-Dt-Sv2" firstAttribute="height" secondItem="fsv-5d-LjJ" secondAttribute="height" multiplier="0.8" id="zRf-c2-3gz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OvC-b1-gkb"/>
+                    <connections>
+                        <outlet property="dataStackView" destination="sP3-YI-w8v" id="Eb8-4V-YAC"/>
+                        <outlet property="distanceLabel" destination="Gp7-dS-cbT" id="S8x-2t-Gc6"/>
+                        <outlet property="launchPromptStackView" destination="TEI-Oa-26B" id="Ir8-bm-Xdv"/>
+                        <outlet property="mapContainerView" destination="jTa-fN-iYC" id="j4p-iB-mjk"/>
+                        <outlet property="mapView" destination="W43-gT-kza" id="3dp-gR-eOz"/>
+                        <outlet property="paceLabel" destination="BHC-x5-Y74" id="Szg-lH-WhP"/>
+                        <outlet property="startButton" destination="wHH-kB-UAe" id="ue4-yW-I2A"/>
+                        <outlet property="stopButton" destination="y3O-Ns-MFS" id="Ijs-oa-iSz"/>
+                        <outlet property="timeLabel" destination="3ui-8i-1n6" id="BDT-rR-blR"/>
+                        <segue destination="edy-es-7gn" kind="show" identifier="EndRunDetailsViewController" id="oBx-ZB-XRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7af-si-zQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="-231"/>
+        </scene>
+        <!--End Run Details View Controller-->
+        <scene sceneID="8ca-LL-54v">
+            <objects>
+                <viewController storyboardIdentifier="EndRunDetailsViewController" id="edy-es-7gn" customClass="EndRunDetailsViewController" customModule="RunForFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8HS-KC-Bpd"/>
+                        <viewControllerLayoutGuide type="bottom" id="DiD-yF-DJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="02b-8x-I0v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNH-dz-PwR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="edy-es-7gn" id="E4d-hY-1bS"/>
+                                </connections>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-kW-TKO">
+                                <rect key="frame" x="16" y="387" width="343" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дистанция:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8d-ls-rzA">
+                                        <rect key="frame" x="120.33333333333334" y="0.0" width="102.66666666666666" height="27"/>
+                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dwg-A6-qo3">
+                                        <rect key="frame" x="146" y="70" width="51.333333333333343" height="27"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAJ-v7-yGx">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="27"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="7Cn-sX-uPM">
+                                        <rect key="frame" x="0.0" y="140" width="343" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-nC-Vlh">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="27"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Средний темп:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-fb-Ote">
+                                                <rect key="frame" x="0.0" y="73" width="145" height="27"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7Cn-sX-uPM" firstAttribute="width" secondItem="eQq-kW-TKO" secondAttribute="width" id="c9o-Xu-tLe"/>
+                                </constraints>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qos-Af-9PA">
+                                <rect key="frame" x="0.0" y="-56" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="Title" largeTitleDisplayMode="always" id="IC9-RU-i5c"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eQq-kW-TKO" firstAttribute="leading" secondItem="02b-8x-I0v" secondAttribute="leadingMargin" id="57q-Fr-gcB"/>
+                            <constraint firstItem="qos-Af-9PA" firstAttribute="bottom" secondItem="jNH-dz-PwR" secondAttribute="top" id="DaN-6n-Y4X"/>
+                            <constraint firstItem="qos-Af-9PA" firstAttribute="trailing" secondItem="jNH-dz-PwR" secondAttribute="trailing" id="IaU-0Q-XEX"/>
+                            <constraint firstAttribute="trailing" secondItem="jNH-dz-PwR" secondAttribute="trailing" id="LhV-yf-wh4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eQq-kW-TKO" secondAttribute="trailing" id="MgU-zy-WpV"/>
+                            <constraint firstItem="qos-Af-9PA" firstAttribute="leading" secondItem="jNH-dz-PwR" secondAttribute="leading" id="QJO-E4-Aex"/>
+                            <constraint firstItem="eQq-kW-TKO" firstAttribute="top" secondItem="jNH-dz-PwR" secondAttribute="bottom" constant="8" symbolic="YES" id="Rua-Nd-XA1"/>
+                            <constraint firstItem="jNH-dz-PwR" firstAttribute="leading" secondItem="02b-8x-I0v" secondAttribute="leading" id="jpg-eN-Nku"/>
+                            <constraint firstItem="jNH-dz-PwR" firstAttribute="top" secondItem="8HS-KC-Bpd" secondAttribute="bottom" id="ops-fp-is0"/>
+                            <constraint firstItem="jNH-dz-PwR" firstAttribute="height" secondItem="02b-8x-I0v" secondAttribute="height" multiplier="0.5" id="sXb-2W-F6h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dMJ-dY-1BK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="homekit" catalog="system" id="EOq-X4-Hsr">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="aWi-f0-IBm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="sAJ-v7-yGx" id="aTy-VQ-igK"/>
+                        <outlet property="distanceLabel" destination="f8d-ls-rzA" id="tZJ-GU-F3O"/>
+                        <outlet property="mapView" destination="jNH-dz-PwR" id="tCV-22-IMQ"/>
+                        <outlet property="paceLabel" destination="uTs-fb-Ote" id="sKW-28-Wfy"/>
+                        <outlet property="timeLabel" destination="tzf-nC-Vlh" id="BKH-Qh-qz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ra3-tu-a1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="-231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FcT-3V-Ge2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="Cwp-Z4-gCT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RwC-XI-nMe">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aIO-cV-TIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPR-mC-1Wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2882" y="-231"/>
+        </scene>
+        <!--Create Workout View Controller-->
+        <scene sceneID="omm-DB-KOL">
+            <objects>
+                <tableViewController title="Add Workout" id="fQ9-a7-9ns" userLabel="Create Workout View Controller" customClass="CreateWorkoutTableViewController" customModule="RunForFun" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vqU-AX-PwG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="uoi-tV-PTz">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="sPD-d9-pLv" userLabel="Start Time Cell">
+                                        <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPD-d9-pLv" id="Zla-L8-QOy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время начала" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbZ-Iv-ZXh">
+                                                    <rect key="frame" x="23" y="8.6666666666666643" width="134.66666666666666" height="27"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2f-v6-vY4">
+                                                    <rect key="frame" x="359" y="22" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.53719413279999995" green="0.53728991749999999" blue="0.5371881127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SbZ-Iv-ZXh" firstAttribute="leading" secondItem="Zla-L8-QOy" secondAttribute="leadingMargin" constant="7" id="8Z1-eZ-1xi"/>
+                                                <constraint firstAttribute="trailing" secondItem="J2f-v6-vY4" secondAttribute="trailing" constant="16" id="YFn-4L-wSk"/>
+                                                <constraint firstAttribute="centerY" secondItem="SbZ-Iv-ZXh" secondAttribute="centerY" id="w8B-Mb-HCO"/>
+                                                <constraint firstItem="J2f-v6-vY4" firstAttribute="centerY" secondItem="Zla-L8-QOy" secondAttribute="centerY" id="wLB-rM-aym"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="xnt-3O-upS" userLabel="Duration Cell">
+                                        <rect key="frame" x="0.0" y="54" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xnt-3O-upS" id="9Vd-rh-uTa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1N-uS-Zyp">
+                                                    <rect key="frame" x="22.999999999999993" y="-0.33333333333333215" width="103.33333333333331" height="44.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="34"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-PP-gJG">
+                                                    <rect key="frame" x="359" y="22" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.53719413279999995" green="0.53728991749999999" blue="0.5371881127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hgG-PP-gJG" firstAttribute="centerY" secondItem="9Vd-rh-uTa" secondAttribute="centerY" id="0PR-EE-5hx"/>
+                                                <constraint firstAttribute="trailing" secondItem="hgG-PP-gJG" secondAttribute="trailing" constant="16" id="DJv-Uk-8vK"/>
+                                                <constraint firstAttribute="centerY" secondItem="p1N-uS-Zyp" secondAttribute="centerY" id="J3M-YH-5kg"/>
+                                                <constraint firstItem="p1N-uS-Zyp" firstAttribute="leading" secondItem="9Vd-rh-uTa" secondAttribute="leadingMargin" constant="7" id="lOg-3o-bXa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fQ9-a7-9ns" id="1hI-ZP-yGK"/>
+                            <outlet property="delegate" destination="fQ9-a7-9ns" id="Cty-7b-r2P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Новая тренировка" id="Qyt-KO-SuK">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="TbL-cW-UiT">
+                            <connections>
+                                <action selector="cancelButtonPressedWithSender:" destination="fQ9-a7-9ns" id="g5S-yJ-gKA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="8lJ-h6-aKK">
+                            <connections>
+                                <action selector="doneButtonPressedWithSender:" destination="fQ9-a7-9ns" id="zru-gQ-4MJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="hgG-PP-gJG" id="OYu-fO-zMi"/>
+                        <outlet property="startTimeLabel" destination="J2f-v6-vY4" id="WpH-ph-a5m"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GK8-f5-7XI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AQU-y8-oNm">
+            <objects>
+                <navigationController id="fAA-RF-NM0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c1k-xz-F2O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fQ9-a7-9ns" kind="relationship" relationship="rootViewController" id="UzE-9o-bVp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5Y-9n-LBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="462"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="vuy-HJ-77l">
+            <objects>
+                <tableViewController title="Profile &amp; BMI" id="sMm-mV-oud" userLabel="Profile" customClass="ProfileViewController" customModule="RunForFun" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Mzm-YD-KYi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Информация пользователя:" id="mdY-Vp-fLI" userLabel="Profile Info">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="5ty-Rd-aTE" detailTextLabel="Oz3-ho-0aq" style="IBUITableViewCellStyleValue1" id="9k3-Ce-4oi">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9k3-Ce-4oi" id="zdm-bw-EYe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Возраст" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ty-Rd-aTE">
+                                                    <rect key="frame" x="16" y="9" width="71.666666666666671" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oz3-ho-0aq">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="rps-3v-h8w" detailTextLabel="JI6-rE-xLd" style="IBUITableViewCellStyleValue1" id="PQd-xx-cg4">
+                                        <rect key="frame" x="0.0" y="99.333332061767578" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PQd-xx-cg4" id="cKb-cp-eDu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Пол" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rps-3v-h8w">
+                                                    <rect key="frame" x="16" y="9" width="31" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JI6-rE-xLd">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="rKo-Bd-WpP" detailTextLabel="XZO-Ur-n9z" style="IBUITableViewCellStyleValue1" id="34i-yd-OwI">
+                                        <rect key="frame" x="0.0" y="143.33333206176758" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="34i-yd-OwI" id="mJu-gi-45v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Группа крови" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rKo-Bd-WpP">
+                                                    <rect key="frame" x="16" y="9" width="134.66666666666666" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XZO-Ur-n9z">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Вес, рост и ИМТ:" id="y53-oY-qyY">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="2ce-tR-fM7" detailTextLabel="CnD-jV-8aM" style="IBUITableViewCellStyleValue1" id="9AJ-B0-7xN">
+                                        <rect key="frame" x="0.0" y="235.33333206176758" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9AJ-B0-7xN" id="ae2-xB-GM6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Вес" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ce-tR-fM7">
+                                                    <rect key="frame" x="16" y="9" width="31" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CnD-jV-8aM">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="VLG-FN-V8l" detailTextLabel="QiI-bY-a2D" style="IBUITableViewCellStyleValue1" id="8bF-y9-0Ug">
+                                        <rect key="frame" x="0.0" y="279.33333206176758" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8bF-y9-0Ug" id="7ZW-4G-cnL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Рост" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VLG-FN-V8l">
+                                                    <rect key="frame" x="16" y="9" width="41" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QiI-bY-a2D">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="4h9-Ht-vGF" detailTextLabel="mMm-da-0xH" style="IBUITableViewCellStyleValue1" id="bXx-zF-9al">
+                                        <rect key="frame" x="0.0" y="323.33333206176758" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bXx-zF-9al" id="3tU-nF-CUM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Индекс массы тела(ИМТ)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4h9-Ht-vGF">
+                                                    <rect key="frame" x="16" y="12.999999999999998" width="190.66666666666666" height="21.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="13"/>
+                                                    <color key="textColor" systemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Не указано" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mMm-da-0xH">
+                                                    <rect key="frame" x="244.66666666666671" y="9" width="114.33333333333333" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="QPv-l5-4A5" userLabel="Read Data">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="dhm-9g-OXy" style="IBUITableViewCellStyleDefault" id="1Cy-rf-Ceh">
+                                        <rect key="frame" x="0.0" y="399.66666603088379" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Cy-rf-Ceh" id="Ihp-C6-LxB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Подсчитать данные &quot;Здоровья&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dhm-9g-OXy">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="Gm8-fk-eQm" userLabel="Save Data">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="dNO-5b-t5C" style="IBUITableViewCellStyleDefault" id="f5X-Jn-VQb">
+                                        <rect key="frame" x="0.0" y="476" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5X-Jn-VQb" id="y3e-z6-Z8S">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Сохранить данные ИМТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNO-5b-t5C">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sMm-mV-oud" id="TLr-Ph-Kgd"/>
+                            <outlet property="delegate" destination="sMm-mV-oud" id="kog-ur-xfx"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="ageLabel" destination="Oz3-ho-0aq" id="pRr-KB-PJz"/>
+                        <outlet property="biologicalSexLabel" destination="JI6-rE-xLd" id="bwN-oI-eiX"/>
+                        <outlet property="bloodTypeLabel" destination="XZO-Ur-n9z" id="Po1-G8-5ZX"/>
+                        <outlet property="bodyMassIndexLabel" destination="mMm-da-0xH" id="e6n-sK-ISN"/>
+                        <outlet property="heightLabel" destination="QiI-bY-a2D" id="0ts-NL-SJD"/>
+                        <outlet property="weightLabel" destination="CnD-jV-8aM" id="0pn-1o-uib"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbI-BG-dH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2882" y="-899"/>
+        </scene>
+        <!--Напоминание о тренировке-->
+        <scene sceneID="9do-LL-Z8h">
+            <objects>
+                <viewController id="oOJ-se-ikk" customClass="ReminderViewController" customModule="RunForFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aoU-kr-tFC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lyS-H5-eY7">
+                                <rect key="frame" x="0.0" y="56" width="375" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="CUx-WE-FGW" detailTextLabel="nOt-VK-wgS" style="IBUITableViewCellStyleSubtitle" id="VzA-h7-rFM">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="81.666664123535156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VzA-h7-rFM" id="qKw-PD-rvL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81.666664123535156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CUx-WE-FGW">
+                                                    <rect key="frame" x="16.000000000000004" y="11" width="51.333333333333336" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nOt-VK-wgS">
+                                                    <rect key="frame" x="16" y="41" width="82" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GAD-VM-vbs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GAD-VM-vbs" firstAttribute="trailing" secondItem="lyS-H5-eY7" secondAttribute="trailing" id="MnZ-XP-vbF"/>
+                            <constraint firstItem="lyS-H5-eY7" firstAttribute="leading" secondItem="GAD-VM-vbs" secondAttribute="leading" id="alV-Ro-Tqy"/>
+                            <constraint firstItem="lyS-H5-eY7" firstAttribute="top" secondItem="GAD-VM-vbs" secondAttribute="top" id="fYY-uM-LmB"/>
+                            <constraint firstItem="GAD-VM-vbs" firstAttribute="bottom" secondItem="lyS-H5-eY7" secondAttribute="bottom" id="ndT-Ex-3ma"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Напоминание о тренировке" id="38z-fG-J0G">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bdw-0o-JrB">
+                            <connections>
+                                <action selector="didTapAdd" destination="oOJ-se-ikk" id="eMe-QA-i8k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="lyS-H5-eY7" id="iYH-fL-Ai2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fX-oj-DQJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="-899"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="ITF-Bv-WEJ">
+            <objects>
+                <viewController storyboardIdentifier="add" id="ARg-Tk-l2C" customClass="AddViewController" customModule="RunForFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7jD-RV-ntU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите какую тренировку вы планируете..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iCf-30-dH4">
+                                <rect key="frame" x="10" y="54" width="355" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sdh-2I-rtZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Время тренировки в минутах..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="phV-Oc-abI">
+                                <rect key="frame" x="10" y="126" width="355" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="pwX-B2-uZm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="QzT-VN-pM5">
+                                <rect key="frame" x="0.0" y="178" width="375" height="600"/>
+                                <locale key="locale" localeIdentifier="ru"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U7x-Vr-04X"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="iCf-30-dH4" firstAttribute="top" secondItem="U7x-Vr-04X" secondAttribute="top" constant="10" id="3cp-Ur-LvS"/>
+                            <constraint firstItem="U7x-Vr-04X" firstAttribute="trailing" secondItem="phV-Oc-abI" secondAttribute="trailing" constant="10" id="Hs8-xT-c0b"/>
+                            <constraint firstItem="U7x-Vr-04X" firstAttribute="trailing" secondItem="QzT-VN-pM5" secondAttribute="trailing" id="Tao-wa-EUH"/>
+                            <constraint firstItem="U7x-Vr-04X" firstAttribute="trailing" secondItem="iCf-30-dH4" secondAttribute="trailing" constant="10" id="Uo3-nY-F4k"/>
+                            <constraint firstItem="QzT-VN-pM5" firstAttribute="bottom" secondItem="U7x-Vr-04X" secondAttribute="bottom" id="WaJ-0G-wLL"/>
+                            <constraint firstItem="QzT-VN-pM5" firstAttribute="top" secondItem="phV-Oc-abI" secondAttribute="bottom" id="aLI-eL-Hqg"/>
+                            <constraint firstItem="iCf-30-dH4" firstAttribute="leading" secondItem="U7x-Vr-04X" secondAttribute="leading" constant="10" id="kf4-tC-ulJ"/>
+                            <constraint firstItem="phV-Oc-abI" firstAttribute="leading" secondItem="U7x-Vr-04X" secondAttribute="leading" constant="10" id="oj5-bp-6KV"/>
+                            <constraint firstItem="phV-Oc-abI" firstAttribute="top" secondItem="iCf-30-dH4" secondAttribute="bottom" constant="20" id="sVJ-H9-FF4"/>
+                            <constraint firstItem="QzT-VN-pM5" firstAttribute="leading" secondItem="U7x-Vr-04X" secondAttribute="leading" id="yzP-K0-mnI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyField" destination="phV-Oc-abI" id="Yr6-We-jWm"/>
+                        <outlet property="datePicker" destination="QzT-VN-pM5" id="YjT-xd-E4a"/>
+                        <outlet property="titleField" destination="iCf-30-dH4" id="V0d-km-eSZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42Q-iN-sKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="-899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="25L-Xb-uqT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="srz-a4-ZZ3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aSp-eD-YRw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mbX-wt-ZRH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oOJ-se-ikk" kind="relationship" relationship="rootViewController" id="0Og-zd-gO1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbM-14-znj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2151" y="-898"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aWi-f0-IBm"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="icons8-личный-тренер-50" width="50" height="50"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
